@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Mehdi Fellahi</title>
     <link rel="stylesheet" href="css/styles_index.css">
 </head>
 <body>
     <script src="https://kit.fontawesome.com/d3b75df285.js" crossorigin="anonymous"></script>
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/" id="navbar__logo"> <i class="fa-solid fa-laptop"></i>&nbsp| Mehdi Fellahi</a>
+            <a href="/index.html" id="navbar__logo"> <i class="fa-solid fa-laptop"></i>&nbsp| Mehdi Fellahi</a>
             <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
             <div class="navbar__toggle" id="mobile-menu">
@@ -20,18 +20,19 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/index.html" class="navbar__links">
-                        Home
-                    </a>
+                    <a href="/index.html" class="navbar__links" id="home-link">Home</a>           
                 </li>    
                 <li class="navbar__item">    
-                    <a href="/blog.html" class="navbar__links">Blog</a>
+                    <a href="/projects.html" class="navbar__links" id="projects-link">Projects</a>
+                </li> 
+                <li class="navbar__item">    
+                    <a href="/blog.html" class="navbar__links" id="blog-link">Blog</a>
                 </li> 
                 <li class="navbar__item">    
                     <a href="/resources/CV_Mehdi_FELLAHI_fr.pdf" target="_blank" class="navbar__links">CV</a>
                 </li>   
                 <li class="navbar__btn">    
-                    <a href="#endOfPage" class="button">Contact</a>
+                    <a href="/index.html#endOfPage" class="button">Contact</a>
                 </li>
             </ul>
         </div>
@@ -42,27 +43,67 @@
         <div class="background_image">
             <div class="main__container">
                 <div class="main__content">
-                    <h1>EMBEDDED</h1>
-                    <h2>SOFTWARE 
-                        ENGINEER
-                    </h2>
-                    <p> and life enjoyer</p>
-
-                    <button class="main__btn"> <a href="/">Blog</a></button>
+                    <h1>SOFTWARE</h1>
+                    <h2>ENGINEER</h2>
+                    <h3>Mehdi Fellahi</h3>
+                    <p style="font-size: 30px;"> I am Mehdi Fellahi, a software engineer at Celad, working in automotive domain for a better future. I am a passionate programmer, artist and car lover. I also love to cook, mathematics, discover new experiences</p>
+                    <button class="main__btn"> <a href="/projects.html">Projects</a></button>
+                    <button class="main__btn"> <a href="/blog.html">Blog</a></button>
                 </div>
-
             </div>
         </div>    
     </div>
 
+    <section id="news" class="section">
+        <h2>NEWS</h2>
+        <div class="news-container">
+            <div class="news-item">
+                <div class="news-icon">
+                    <i class="fas fa-handshake"></i> <!-- Example icon -->
+                </div>
+                <div class="news-content">
+                    <h3>April 2024</h3>
+                    <p>I have joined CELAD For a 6 months internship at Sophia Antipolis in te automotive domain.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-icon">
+                    <i class="fas fa-handshake"></i> <!-- Example icon -->
+                </div>
+                <div class="news-content">
+                    <h3>July 2023</h3>
+                    <p>I joined DATACORP for 2 months internship. The mission tackles automation and API.</p>
+                </div>
+            </div>
 
+            <div class="news-item">
+                <div class="news-icon">
+                    <i class="fas fa-plane"></i> <!-- Example icon -->
+                </div>
+                <div class="news-content">
+                    <h3>February 2023</h3>
+                    <p>I started my international journey as a student at UPB</p>
+                </div>
+            </div>
+            
+            <div class="news-item">
+                <div class="news-icon">
+                    <i class="fas fa-book"></i> <!-- Example icon -->
+                </div>
+                <div class="news-content">
+                    <h3>September 2021</h3>
+                    <p>I joined ENSEEIHT, in the computer science branch. This is the begging of my dream to become a software engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="services">
         <h1>  PROJECTS </h1>
             <div class="services__container">
                 <div class="services__card">
                     <h2> Current Project </h2>
-                    <p>Raspberry Drone</p>
+                    <p>Motion Capture</p>
                     <button>Let's see</button>
             </div>
             
@@ -74,10 +115,6 @@
             </div>
        
     </div>
-
-
-
-
 
 
     <div class="footer__container">
@@ -95,14 +132,9 @@
                     <div id="copy-notification" style="display: none; position: fixed; top: 80%; left: 50%; transform: translate(-50%, -50%); background-color: #666; color: #fff; padding: 20px; border-radius: 10px; font-size: 24px; z-index: 1000;">
                         Email copied to clipboard!
                     </div>
-
-                    
-
                     <a href="https://github.com/Mehdi465" class="social__icon--link" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    
-
                 </div>
                 <div class="footer__link--items">
                     
@@ -112,18 +144,12 @@
             
         </div>
 
-        <div class="social__media">
-            <div class="social__media--wrap">
-                <p class="website_rights">
-                    © I don't know how to fezef ritghts rightly 
-                </p>
-                <div class="social__icons">
-                    
-                </div>
-            </div>
-        </div>
     </div>
+    <footer class="footer">
+        <p>&copy; 2024 MyBlog. All rights reserved.</p>
+    </footer>
 
     <script src="app.js"></script>
+    
 </body>
 </html>

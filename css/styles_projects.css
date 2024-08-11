@@ -3,16 +3,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins ', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
 body {
     line-height: 1.6;
-    background-color: #121212; /* Dark background color for the entire page */
-    color: #ffffff; /* Light text color for readability */
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: #121212; /* Dark background for the whole page */
+    color: #e0e0e0; /* Light text color for contrast */
 }
 
 /* Navbar Styles */
@@ -80,6 +77,43 @@ body {
     border-bottom: 2px solid #21ff51; /* Optional: Add an underline or border */
 }
 
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #229b62;
+    color: #fff
+}
+
+.button_more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #229b62;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button_more:hover {
+    background-color: #4837ff;
+}
+
 .navbar__toggle {
     display: none;
 }
@@ -97,105 +131,64 @@ body {
     margin-bottom: 40px;
 }
 
-h1, h2 {
-    margin-bottom: 20px;
+.project {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #333; /* Darker border for a dark theme */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #1e1e1e; /* Dark background color */
+    color: #e0e0e0; /* Light text color for contrast */
 }
 
-.post {
-    margin-bottom: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #229b62;
-    border-radius: 4px;
-}
-
-.button:hover {
-    background: #4837ff;
-    transition: all 0.3s ease;
-}
-
-/* drawing part*/
-.drawing-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.drawing-item {
-    background-color: #1e1e1e;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    width: 300px; /* Fixed width for uniformity */
-    height: 300px; /* Fixed height for uniformity */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Ensures no overflow from images */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.drawing-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 4px;
-}
-
-.drawing-item p {
-    color: #b3b3b3;
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/*cooking part*/
-.cooking-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.cooking-item {
-    display: flex;
-    align-items: center;
-    background-color: #332b2b;
-    padding: 15px;
-    border-radius: 8px;
-    width: 100%; /* Full width of the container */
-    max-width: 800px; /* Limit the maximum width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 auto; /* Center the item */
-    overflow: hidden;
-}
-
-.cooking-item img {
-    width: 40%; /* Adjust width as needed */
+.project-logo {
+    max-width: 400px; /* Adjust size as needed */
     height: auto;
-    border-radius: 4px;
-    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: 20px 0; /* Add spacing around the image */
 }
 
-.cooking-text {
+.project h3 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #21ff51; /* Highlighted color for headings */
+}
+
+.project p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.3rem;
+}
+
+.project ul {
+    list-style-type: disc;
     padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.project ul li {
+    margin-bottom: 10px;
+}
+
+.github-link {
+    display: inline-block;
+    background-color: #333;
     color: #fff;
-    flex-grow: 1;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cooking-item h3 {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0; /* Margin below the title */
+.github-link i {
+    margin-right: 8px; /* Space between icon and text */
 }
 
-.cooking-item p {
-    margin: 0; /* No margin for paragraphs */
-    font-size: 1rem;
+.github-link:hover {
+    background-color: #555;
+    transform: translateY(-3px); /* Slight lift on hover */
+    text-decoration: underline;
 }
 
 /* Footer Styles */
@@ -253,6 +246,7 @@ h1, h2 {
         display: block;
         cursor: pointer;
     }
+    
 
     #mobile-menu.is-active .bar:nth-child(2) {
         opacity: 0;

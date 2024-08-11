@@ -25,3 +25,18 @@ function copyToClipboard(text) {
         notification.style.display = 'none';
     }, 3000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const homeLink = document.getElementById('home-link');
+    const blogLink = document.getElementById('blog-link');
+    const projectsLink = document.getElementById('projects-link'); // Added for completeness
+
+    if (currentPath.includes('index.html')) {
+        homeLink.classList.add('active');
+    } else if (currentPath.includes('blog.html')) {
+        blogLink.classList.add('active');
+    } else if (currentPath.includes('projects.html')) { // Added for completeness
+        projectsLink.classList.add('active');
+    }
+});

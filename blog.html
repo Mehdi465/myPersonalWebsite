@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Mehdi Fellahi</title>
     <link rel="stylesheet" href="css/styles_blog.css">
 </head>
 <body>
@@ -20,18 +20,19 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/index.html" class="navbar__links">
-                        Home
-                    </a>
+                    <a href="/index.html" class="navbar__links" id="home-link">Home</a>
                 </li>    
                 <li class="navbar__item">    
-                    <a href="/blog.html" class="navbar__links">Blog</a>
+                    <a href="/projects.html" class="navbar__links" id="projects-link">Projects</a>
+                </li> 
+                <li class="navbar__item">    
+                    <a href="/blog.html" class="navbar__links" id="blog-link">Blog</a>
                 </li> 
                 <li class="navbar__item">    
                     <a href="/resources/CV_Mehdi_FELLAHI_fr.pdf" target="_blank" class="navbar__links">CV</a>
                 </li>   
                 <li class="navbar__btn">    
-                    <a href="#endOfPage" class="button">Contact</a>
+                    <a href="/index.html#endOfPage" class="button">Contact</a>
                 </li>
             </ul>
         </div>
@@ -41,51 +42,98 @@
     <div class="main-content">
         <section id="home" class="section">
             <h1>Welcome to My Blog</h1>
-            <p>Your daily dose of amazing articles.</p>
         </section>
 
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>I'm a passionate writer and blogger sharing my thoughts and insights with the world.</p>
+            <h2>Drawing</h2>
+            <p>I'm a passionate drawer, (artist, nothng related to the furniture), </p>
         </section>
 
-        <section id="blog" class="section">
-            <h2>Latest Posts</h2>
-            <article class="post">
-                <h3>Post Title 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc sit amet venenatis...</p>
-                <a href="#" class="button">Read More</a>
-            </article>
-            <article class="post">
-                <h3>Post Title 2</h3>
-                <p>Proin eu diam sed risus vehicula tincidunt. Fusce suscipit, dui vel ultricies...</p>
-                <a href="#" class="button">Read More</a>
-            </article>
-            <!-- Add more blog posts here -->
+        <!-- Drawing part -->
+        <section id="drawings" class="section">
+            <h2>My Drawings</h2>
+            <div class="drawing-gallery">
+                <div class="drawing-item">
+                    <img src="images/drawing/dragon.jpeg" alt="Drawing_dragon">
+                </div>
+                <div class="drawing-item">
+                    <img src="images/drawing/greninja.jpeg" alt="Drawing_greninja">
+                </div>
+                <div class="drawing-item">
+                    <img src="images/drawing/unohanna.jpeg" alt="Drawing_unohanna">
+                </div>
+                <div class="drawing-item">
+                    <img src="images/drawing/pain_choc.jpeg" alt="Drawing_pain_choc">
+                </div>
+                <div class="drawing-item">
+                    <img src="images/drawing/queen_card.jpeg" alt="Drawing_queen_card">
+                </div>
+                <div class="drawing-item">
+                    <img src="images/drawing/noodles.jpeg" alt="Drawing_noodles">
+                </div>
+            </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out if you have any questions or comments.</p>
+        <section id="cooking" class="section">
+            <h2>Cooking</h2>
+            <div class="cooking-gallery">
+                <div class="cooking-item">
+                    <img src="/images/cooking/croissants.jpeg" alt="Pains au chocolat and croissants">
+                    <div class="cooking-text">
+                        <h3>Pains au chocolat and croissants</h3>
+                    </div>
+                </div>
+                <div class="cooking-item">
+                    <img src="images/cooking/paris_brest.jpeg" alt="Paris Brest">
+                    <div class="cooking-text">
+                        <h3>Paris Brest</h3>
+                    </div>
+                </div>
+                <div class="cooking-item">
+                    <img src="images/cooking/sanogku_tiramisu.jpeg" alt="Salted butter caramel songoku tiramisu">
+                    <div class="cooking-text">
+                        <h3>Salted butter caramel songoku tiramisu</h3>
+                    </div>
+                </div>
+                <div class="cooking-item">
+                    <img src="images/cooking/pasta.jpeg" alt="Lazy pasta">
+                    <div class="cooking-text">
+                        <h3>Lazy pasta</h3>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
-
+        
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 MyBlog. All rights reserved.</p>
     </footer>
 
     <script>
-        // Toggle mobile menu
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbarMenu = document.querySelector('.navbar__menu');
+    // Toggle mobile menu
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbarMenu = document.querySelector('.navbar__menu');
 
-        mobileMenu.addEventListener('click', function () {
-            mobileMenu.classList.toggle('is-active');
-            navbarMenu.classList.toggle('active');
-        });
+    mobileMenu.addEventListener('click', function () {
+        mobileMenu.classList.toggle('is-active');
+        navbarMenu.classList.toggle('active');
+    });
+
+    // Highlight the active page link
+    const currentPath = window.location.pathname;
+    console.log('Current Path:', currentPath); // Log the current path to debug
+
+    const homeLink = document.getElementById('home-link');
+    const blogLink = document.getElementById('blog-link');
+    const projectsLink = document.getElementById('projects-link'); // Added for completeness
+
+    if (currentPath.includes('index.html')) {
+        homeLink.classList.add('active');
+    } else if (currentPath.includes('blog.html')) {
+        blogLink.classList.add('active');
+    } else if (currentPath.includes('projects.html')) { // Added for completeness
+        projectsLink.classList.add('active');
+    }
     </script>
-</body>
-</html>
 </body>
 </html>

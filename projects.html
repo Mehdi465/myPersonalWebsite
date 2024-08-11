@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehdi Fellahi</title>
+    <link rel="stylesheet" href="css/styles_projects.css">
+    <style>
+        .project-logo {
+            max-width: 200px; /* Adjust size as needed */
+            height: auto;
+            display: block;
+            margin: 20px 0; /* Add spacing around the image */
+        }
+    </style>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/d3b75df285.js" crossorigin="anonymous"></script>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/index.html" id="navbar__logo"> <i class="fa-solid fa-laptop"></i>&nbsp| Mehdi Fellahi</a>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links" id="home-link">Home</a>           
+                </li>    
+                <li class="navbar__item">    
+                    <a href="/projects.html" class="navbar__links" id="projects-link">Projects</a>
+                </li> 
+                <li class="navbar__item">    
+                    <a href="/blog.html" class="navbar__links" id="blog-link">Blog</a>
+                </li> 
+                <li class="navbar__item">    
+                    <a href="/resources/CV_Mehdi_FELLAHI_fr.pdf" target="_blank" class="navbar__links">CV</a>
+                </li>   
+                <li class="navbar__btn">    
+                    <a href="/index.html#endOfPage" class="button">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section id="projects" class="section">
+            <h2>Projects and Experience</h2>
+            <article class="project">
+                <h3>Private Lesson Experience</h3>
+                <img src="images/ingeplus.png" alt="Association Logo" class="project-logo" > <!-- Added Image -->
+                <p><strong>Duration:</strong> 6 months</p>
+                <p>
+                    Alongside my studies, I decided to join an association in order to give private lessons to needy students. I had the opportunity to develop and refine various skills. I taught mathematics, tailored my approach to individual student needs, and created customized lesson plans to ensure effective learning. This experience honed my communication skills, patience, and ability to adapt teaching methods to different learning styles.
+                </p>
+                <p>
+                    Key achievements include:
+                </p>
+                <ul>
+                    <li>Successfully helped students improve their grades and understanding of subjects.</li>
+                    <li>Developed personalized lesson plans and educational materials.</li>
+                    <li>Received positive feedback from students and parents for my teaching approach and dedication.</li>
+                </ul>
+
+                <a href="/projects/project1-details.html" class="button_more">More Details</a>
+            </article>
+
+            <article class="project">
+                <h3>Camera Motion Capture</h3>
+                <img src="images/motioncapture.png" alt="Association Logo" class="project-logo" > <!-- Added Image -->
+                <p><strong>Duration:</strong> July 2024 - ?</p>
+                <p>
+                    I am currently working on a face and body motion capture in order the facilitate animators work. The specifity will be to use multiple camera get a better result. This is be used on Blener on Unreal engine 5
+                </p>
+                <p><strong>
+                    Key achievements include:
+                </strong>
+                </p>
+                <ul>
+                    <li>Python coding</li>
+                    <li>Opencv library</li>
+                    <li>Imagery process</li>
+                </ul>
+            </article>
+
+            <article class="project">
+                <h3>Music Player</h3>
+                <img src="images/MusicPlayer.png" alt="Association Logo" class="project-logo" >
+                <p><strong>Duration:</strong> 3 days</p>
+                <p>
+                    This was actually a challenge. that i tried to code a music player from scratch in Python during a week-end. The initial plan was to add a voice command. However, this technology only works with cloud computing, sending your voice over the internet, then processed on their server. I dont really like those kind of technology since they are not really efficient. All those calculous to just obtain "next" or "pause". Furthermore, to add a music, i am using youtube. Since its not legal i decided to stop using this code although it is somehow tolerated for a personal use.
+                </p>
+                <p><strong>
+                    Key achievements include:
+                </strong>
+                </p>
+                <ul>
+                    <li>Python coding</li>
+                    <li>UI interface</li>
+                    <li>Cloud AI process</li>
+                </ul>
+            </article>
+
+            <article class="project">
+                <h3>Tempo Mixer</h3>
+                <!-- <img src="images/motioncapture.png" alt="Association Logo" class="project-logo" >  Added Image -->
+                <p><strong>Duration:</strong> September 2023</p>
+                <p>
+                    The idea is to mix un music and a chore that share the same tempo, whose style are complitly different. It was a bit tricky to implement, using an SQL databse
+                </p>
+                <p><strong>
+                    Key achievements include:
+                </strong>
+                </p>
+                <ul>
+                    <li>Python coding</li>
+                    <li>Music theory</li>
+                    <li>MySQL Database</li>
+                </ul>
+            </article>
+
+            <article class="project">
+                <h3>And more ...</h3>
+                
+                <a href="https://github.com/Mehdi465" target="_blank" class="github-link">
+                    <i class="fa-brands fa-github"></i> View My GitHub
+                </a>
+                
+            </article>
+            
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mehdi Fellahi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Highlight the active page link
+        const currentPath = window.location.pathname;
+        console.log('Current Path:', currentPath); // Log the current path to debug
+
+        const homeLink = document.getElementById('home-link');
+        const blogLink = document.getElementById('blog-link');
+        const projectsLink = document.getElementById('projects-link'); 
+
+        if (currentPath.includes('index.html')) {
+            homeLink.classList.add('active');
+        } else if (currentPath.includes('blog.html')) {
+            blogLink.classList.add('active');
+        } else if (currentPath.includes('projects.html')) {
+            projectsLink.classList.add('active');
+        }
+    </script>
+</body>
+</html>
